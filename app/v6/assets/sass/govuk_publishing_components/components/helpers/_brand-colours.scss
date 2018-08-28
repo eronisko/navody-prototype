@@ -1,0 +1,58 @@
+@import "colours/organisation";
+
+// this uses the colours from govuk_frontend_toolkit
+// https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/colours/_organisation.scss
+
+@mixin organisation-brand-colour() {
+  @each $organisation in $all-organisation-brand-colours {
+    .brand--#{nth($organisation, 1)} {
+      .brand__color {
+        color: nth($organisation, 3);
+
+        &:hover,
+        &:focus {
+          color: darken( nth($organisation, 3), 10% );
+        }
+      }
+
+      // the & declaration allows border-color to also be applied to the parent
+      // element as required by the heading component, adds 2KB to the CSS
+      &.brand__border-color,
+      .brand__border-color {
+        border-color: nth($organisation, 2);
+      }
+    }
+  }
+}
+
+@include organisation-brand-colour;
+
+// colours for the prime ministers office are not included in the toolkit
+// so are written out here for our use
+
+.brand--prime-ministers-office-10-downing-street {
+  .brand__color {
+    color: $fuschia;
+
+    &:hover,
+    &:focus {
+      color: darken( $fuschia, 10% );
+    }
+  }
+
+  &.brand__border-color,
+  .brand__border-color {
+    border-color: $black;
+  }
+}
+
+// in the toolkit, civil service has red for the text and borders
+// but the required border colour is black, ideally would fix this in
+// the toolkit but other things are using it
+
+.brand--civil-service {
+  &.brand__border-color,
+  .brand__border-color {
+    border-color: $black;
+  }
+}

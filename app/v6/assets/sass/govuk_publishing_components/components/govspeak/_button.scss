@@ -1,0 +1,13 @@
+@import "../../../../node_modules/govuk-frontend/components/button/button";
+
+// scss-lint:disable PlaceholderInExtend
+.gem-c-govspeak {
+  .button {
+    @extend .govuk-button;
+  }
+
+  .button-start {
+    @extend .govuk-button--start;
+  }
+}
+// scss-lint:enable PlaceholderInExtend

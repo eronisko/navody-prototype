@@ -1,0 +1,46 @@
+// This is the file that the application needs to include in order to use
+// the components.
+
+// `govuk_frontend_toolkit`
+@import "measurements";
+@import "grid_layout";
+@import "typography";
+@import "colours";
+@import "components/helpers/variables";
+@import "components/helpers/brand-colours";
+
+@import "components/back-link";
+@import "components/breadcrumbs";
+@import "components/button";
+@import "components/contents-list";
+@import "components/document-list";
+@import "components/error-summary";
+@import "components/feedback";
+@import "components/fieldset";
+@import "components/govspeak";
+@import "components/heading";
+@import "components/highlight-boxes";
+@import "components/image-card";
+@import "components/input";
+@import "components/inverse-header";
+@import "components/label";
+@import "components/lead-paragraph";
+@import "components/metadata";
+@import "components/notice";
+@import "components/organisation-logo";
+@import "components/phase-banner";
+@import "components/previous-and-next-navigation";
+@import "components/radio";
+@import "components/related-navigation";
+@import "components/search";
+@import "components/share-links";
+@import "components/step-by-step-nav-header";
+@import "components/step-by-step-nav-related";
+@import "components/step-by-step-nav";
+@import "components/subscription-links";
+@import "components/success-alert";
+@import "components/tabs";
+@import "components/taxonomy-navigation";
+@import "components/taxonomy-list";
+@import "components/title";
+@import "components/translation-nav";

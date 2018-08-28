@@ -1,0 +1,50 @@
+.gem-c-step-nav-related {
+  border-top: 2px solid $govuk-blue;
+  margin-bottom: $gutter;
+}
+
+.gem-c-step-nav-related__heading {
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-one-third;
+  @include bold-19;
+}
+
+.gem-c-step-nav-related__links {
+  @include bold-16;
+  margin: 0;
+  padding: 0;
+}
+
+.gem-c-step-nav-related--singular {
+  margin-bottom: $gutter-one-third + 3;
+
+  .gem-c-step-nav-related__heading {
+    @include _core-font-generator(19px, 19px, 19px, 1.4, 1.4, false, bold);
+    margin-top: $gutter-two-thirds;
+  }
+
+  .gem-c-step-nav-related__pretitle {
+    margin-bottom: $gutter-one-quarter;
+  }
+}
+
+.gem-c-step-nav-related__pretitle {
+  display: block;
+  margin-bottom: $gutter-half;
+
+  @include media(tablet) {
+    margin-bottom: 5px;
+  }
+}
+
+.gem-c-step-nav-related__links {
+  list-style: none;
+}
+
+.gem-c-step-nav-related__link-item {
+  margin-top: $gutter-half;
+
+  @include media(tablet) {
+    margin-top: 5px;
+  }
+}

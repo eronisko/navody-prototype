@@ -1,0 +1,17 @@
+// This is the file that the application needs to include in order to use
+// the components.
+
+// `govuk_frontend_toolkit`
+@import "measurements";
+@import "grid_layout";
+@import "typography";
+@import "colours";
+
+@import "components/print/contents-list";
+@import "components/print/feedback";
+@import "components/print/govspeak-html-publication";
+@import "components/print/govspeak";
+@import "components/print/share-links";
+@import "components/print/step-by-step-nav-header";
+@import "components/print/step-by-step-nav";
+@import "components/print/title";

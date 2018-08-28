@@ -1,0 +1,117 @@
+// scss-lint:disable SelectorFormat
+
+$grey-2: #bfc1c3;
+$white: #ffffff;
+$number-circle-size: 35px;
+$stroke-width: 3px;
+
+.gem-c-step-nav:not(.gem-c-step-nav--large),
+.gem-c-step-nav__controls,
+.gem-c-step-nav__toggle-link,
+.gem-c-step-nav__help {
+  display: none;
+}
+
+.gem-c-step-nav {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: $number-circle-size / 2;
+    width: 3px;
+    height: 100%;
+    margin-left: -1.5px;
+    border-left: solid $stroke-width $grey-2;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 6;
+    bottom: 0;
+    left: 0;
+    margin-left: $number-circle-size / 4;
+    width: $number-circle-size / 2;
+    height: 0;
+    border-bottom: solid $stroke-width $grey-2;
+  }
+}
+
+.gem-c-step-nav__step {
+  position: relative;
+}
+
+.gem-c-step-nav__steps {
+  padding: 0;
+  list-style: none;
+}
+
+.gem-c-step-nav__circle {
+  @include _core-font-generator(19px, 16px, 19px, 30px, 23px, false, bold);
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $number-circle-size;
+  height: $number-circle-size;
+  background: $white;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.gem-c-step-nav__circle--number {
+  border: solid 3px $grey-2;
+}
+
+.gem-c-step-nav__step,
+.gem-c-step-nav__paragraph,
+.gem-c-step-nav__links {
+  @include core-16;
+  padding-bottom: 1em;
+}
+
+.gem-c-step-nav__step {
+  position: relative;
+  padding-left: 60px;
+}
+
+.gem-c-step-nav__title {
+  @include bold-19;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+
+.gem-c-step-nav__button--title {
+  @include bold-19;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.gem-c-step-nav__context {
+  &:before {
+    content: " \2013  ";
+  }
+}
+
+.gem-c-step-nav__panel-link--active {
+  font-weight: bold;
+}
+
+.gem-c-step-nav__links {
+  padding-left: 0;
+  list-style: none;
+}
+
+.gem-c-step-nav__links--choice {
+  padding-left: 30px;
+  list-style: disc;
+}
+
+.gem-c-step-nav__link {
+  margin-bottom: 0.3em;
+}
+
+// scss-lint:enable SelectorFormat

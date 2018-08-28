@@ -6,5 +6,8 @@ if (window.console && window.console.info) {
 }
 
 $(document).ready(function () {
-  window.GOVUKFrontend.initAll()
+  window.GOVUKFrontend.initAll();
+
+    var nav = new window.GOVUK.Modules.Gemstepnav();
+    nav.start($('[data-module=gemstepnav]'));
 })

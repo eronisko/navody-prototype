@@ -1,0 +1,22 @@
+.gem-c-inverse-header {
+  width: 100%;
+  background-color: $govuk-blue;
+  color: $white;
+  margin-bottom: $gutter;
+  padding: 0 $gutter $gutter;
+  box-sizing: border-box;
+}
+
+.gem-c-inverse-header a {
+  color: $white;
+}
+
+.gem-c-inverse-header--full-width {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: $gutter-half;
+}
+
+.gem-c-inverse-header--padding-top {
+  padding-top: $gutter-half;
+}
