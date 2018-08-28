@@ -5,16 +5,27 @@
 homepageUrl: "/",
 serviceName: "Žiadosť o príspevok pri narodení dieťata"
 }) }}
+
 {% endblock %}
 
 {% block pageTitle %}
-Žiadosť o príspevok pri narodení dieťata
+Požiadanie o príspevok pri narodení dieťaťa
 {% endblock %}
 
 {% block content %}
 
+<div class="gem-c-step-nav-header" data-module="track-click" style="margin-top: -30px; margin-bottom: 30px;">
+    <span class="gem-c-step-nav-header__part-of">Súčasť situácie</span>
+    <a href="/" class="gem-c-step-nav-header__title" data-track-category="stepNavHeaderClicked" data-track-action="top" data-track-label="/childcare-parenting/pregnancy-and-birth" data-track-dimension="Having children: step by step" data-track-dimension-index="29" data-track-options="{&quot;dimension96&quot; : &quot;false&quot; }">
+        Narodenie dieťaťa
+    </a>
+</div>
+
 <div class="govuk-grid-row">
+
     <div class="govuk-grid-column-two-thirds">
+
+
         <h1 class="govuk-heading-xl">Žiadosť o príspevok pri narodení dieťata</h1>
 
 
@@ -36,6 +47,19 @@ serviceName: "Žiadosť o príspevok pri narodení dieťata"
         href: "app-prispevok-pri-narodeni-dietata-2",
         classes: "govuk-button--start"
         }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+        <div class="gem-c-step-nav-related gem-c-step-nav-related--singular" data-module="track-click">
+            <h2 class="gem-c-step-nav-related__heading">
+                <span class="gem-c-step-nav-related__pretitle">Súčasť situácie</span>
+                <a href="/learn-to-drive-a-car" class="gem-c-step-nav-related__link" data-track-category="stepNavPartOfClicked" data-track-action="Part of" data-track-label="/learn-to-drive-a-car" data-track-dimension="Learn to drive a car: step by step" data-track-dimension-index="29" data-track-options="{&quot;dimension96&quot; : &quot;&quot; }">
+                    Narodenie dieťaťa
+                </a>
+            </h2>
+        </div>
+        <div data-module="gemstepnav" class="gem-c-step-nav js-hidden" data-remember data-id="e01e924b-9c7c-4c71-8241-66a575c2f61f" data-show-text="Zobraziť" data-hide-text="Skryť" data-show-all-text="Zobraziť všetko" data-hide-all-text="Skryť všetko">
+            {% include "includes/narodenie-steps.html" %}
+        </div>
     </div>
 </div>
 
