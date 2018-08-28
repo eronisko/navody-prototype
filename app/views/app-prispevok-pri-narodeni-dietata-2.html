@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: "Žiadosť o príspevok pri narodení dieťata"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Žiadosť o príspevok pri narodení dieťata
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        {% call govukFieldset({
+        legend: {
+        text: "Potvrdenia",
+        classes: "govuk-fieldset__legend--xl",
+        isPageHeading: true
+        }
+        }) %}
+
+        {{ govukFileUpload({
+        id: "file-upload-1",
+        name: "file-upload-1",
+        label: {
+        text: "Nahrajte potvrdenie lekára, že sa dieťa dožilo 28 dní."
+        }
+        }) }}
+
+        {{ govukButton({
+        text: "Pokračovať",
+        href: "app-prispevok-pri-narodeni-dietata-3"
+        }) }}
+
+        {% endcall %}
+    </div>
+</div>
+
+{% endblock %}
