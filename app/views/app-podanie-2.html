@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: "Odoslanie podania"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Odoslanie podania
+{% endblock %}
+
+{% block content %}
+
+<script>
+  function eidClientNotRunning() {
+    var elm = document.getElementById('eid-client-status');
+    elm.innerText = 'nebezi';
+  }
+
+  function eidClientRunning() {
+    var elm = document.getElementById('eid-client-status');
+    elm.innerText = 'OK';
+  }
+
+  const request = new XMLHttpRequest();
+  const url = 'http://127.0.0.1:14741/';
+  request.open("GET", url);
+  request.send();
+  request.onreadystatechange = (e) => {
+    signerClientRunning();
+  };
+  request.onerror = (e) => {
+    signerClientNotRunning();
+  };
+
+  function signerClientNotRunning() {
+    var elm = document.getElementById('signer-not-running-message');
+    elm.style.display = 'block'
+  }
+
+  function signerClientRunning() {
+    var elm = document.getElementById('signer-client-status');
+    elm.innerText = 'OK';
+  }
+</script>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Odoslanie podania</h1>
+
+        {{ govukWarningText({
+        html: 'Chystáte odoslať podanie, a na to je potrebné, aby ste sa prihlásili pomocou elektronického občianskeho preukazu. Po stlačení tlačidla odoslať podanie, budete presmerovaný na stránku www.slovensko.sk',
+        iconFallbackText: "Upozornenie"
+        }) }}
+
+        {{ govukButton({
+        text: "Odoslať podanie",
+        href: "app-podanie-3",
+        classes: "govuk-button--start"
+        }) }}
+
+    </div>
+</div>
+
+{% endblock %}

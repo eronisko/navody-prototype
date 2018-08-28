@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: "Žiadosť o príspevok pri narodení dieťata"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Žiadosť o príspevok pri narodení dieťata
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Žiadosť o príspevok pri narodení dieťata</h1>
+
+
+        <h2 class="govuk-heading-l">Predtým ako začnete</h2>
+        {{ govukWarningText({
+        html: 'K tejto žiadosti budete potrebovať <a href="">potvrdenie lekára o tom, že sa dieťa dožilo 28 dní</a>.',
+        iconFallbackText: "Pozor"
+        }) }}
+
+
+
+        {{ govukWarningText({
+        html: 'Taktiež budete potrebovať <a href="">potvrdenie o tom, že matka navštevovala gynekológa X mesiacov pred pôrodom</a>.',
+        iconFallbackText: "Pozor"
+        }) }}
+
+        {{ govukButton({
+        text: "Potvrdenia mám a chcem pokračovať",
+        href: "app-prispevok-pri-narodeni-dietata-2",
+        classes: "govuk-button--start"
+        }) }}
+    </div>
+</div>
+
+{% endblock %}

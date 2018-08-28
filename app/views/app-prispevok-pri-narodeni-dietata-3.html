@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: "Žiadosť o príspevok pri narodení dieťata"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Žiadosť o príspevok pri narodení dieťata
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        {% call govukFieldset({
+        legend: {
+        text: "Vyplatenie príspevku",
+        classes: "govuk-fieldset__legend--xl",
+        isPageHeading: true
+        }
+        }) %}
+
+        {{ govukInput({
+        label: {
+        text: "Číslo účtu (IBAN)"
+        },
+        name: "iban",
+        type: "text"
+        }) }}
+
+
+        {{ govukButton({
+        text: "Pokračovať",
+        href: "app-prispevok-pri-narodeni-dietata-4"
+        }) }}
+
+        {% endcall %}
+    </div>
+</div>
+
+{% endblock %}
